@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RockPaperScissorsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="eWS-UQ-Ryc">
+                                <rect key="frame" x="169.5" y="313" width="75.5" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4Uz-Uc-hSL"/>
+                                    <constraint firstAttribute="width" constant="75.5" id="XMM-xh-f58"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzu-uP-Lyk">
+                                <rect key="frame" x="183" y="443" width="48" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="5gM-ns-ryn">
+                                <rect key="frame" x="30" y="513.5" width="354" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2u-ZZ-15W">
+                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="70"/>
+                                        <state key="normal" image="rock"/>
+                                        <state key="highlighted" image="rock_tap"/>
+                                        <connections>
+                                            <action selector="didTappedRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H1a-9U-x1P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izz-qr-aYL">
+                                        <rect key="frame" x="139.5" y="0.0" width="75" height="70"/>
+                                        <state key="normal" image="paper"/>
+                                        <state key="highlighted" image="paper_tap"/>
+                                        <connections>
+                                            <action selector="didTappedPaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IhW-sM-VxZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBu-U4-jm0">
+                                        <rect key="frame" x="278.5" y="0.0" width="75.5" height="70"/>
+                                        <state key="normal" image="scissors"/>
+                                        <state key="highlighted" image="scissors_tap"/>
+                                        <connections>
+                                            <action selector="didTappedScissors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swe-1z-uQa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="S5y-oT-YcF"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg0-Hc-eSG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="Tp5-eX-1vX">
+                                        <rect key="frame" x="107" y="142" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="ZmC-Tw-6Mp"/>
+                                            <constraint firstAttribute="width" secondItem="Tp5-eX-1vX" secondAttribute="height" multiplier="1:1" id="fbl-2b-hED"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Stage" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzO-FB-cvi">
+                                        <rect key="frame" x="147" y="392" width="120" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="oIE-sy-mrT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4r-92-MRe">
+                                        <rect key="frame" x="46" y="456" width="322" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="a4r-92-MRe" secondAttribute="height" multiplier="79:14" id="Q9N-OL-RAo"/>
+                                        </constraints>
+                                        <state key="normal" image="start_button"/>
+                                        <state key="highlighted" image="start_button_tap"/>
+                                        <connections>
+                                            <action selector="didTappedStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRf-8U-R5a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="IzO-FB-cvi" firstAttribute="top" secondItem="Tp5-eX-1vX" secondAttribute="bottom" constant="50" id="496-Sa-hvW"/>
+                                    <constraint firstItem="IzO-FB-cvi" firstAttribute="centerX" secondItem="zg0-Hc-eSG" secondAttribute="centerX" id="Dro-5b-3c0"/>
+                                    <constraint firstItem="IzO-FB-cvi" firstAttribute="centerX" secondItem="Tp5-eX-1vX" secondAttribute="centerX" id="M6O-Pg-dk7"/>
+                                    <constraint firstItem="IzO-FB-cvi" firstAttribute="centerY" secondItem="zg0-Hc-eSG" secondAttribute="centerY" id="NW7-3j-Ot0"/>
+                                    <constraint firstItem="a4r-92-MRe" firstAttribute="top" secondItem="IzO-FB-cvi" secondAttribute="bottom" constant="30" id="hw7-j7-cHn"/>
+                                    <constraint firstItem="a4r-92-MRe" firstAttribute="centerX" secondItem="IzO-FB-cvi" secondAttribute="centerX" id="y9m-37-AYs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rzu-uP-Lyk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="01X-GM-vgK"/>
+                            <constraint firstItem="rzu-uP-Lyk" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4PY-KQ-pAZ"/>
+                            <constraint firstItem="eWS-UQ-Ryc" firstAttribute="bottom" secondItem="rzu-uP-Lyk" secondAttribute="top" constant="-50" id="4fY-Kl-Eb5"/>
+                            <constraint firstItem="rzu-uP-Lyk" firstAttribute="centerX" secondItem="eWS-UQ-Ryc" secondAttribute="centerX" id="8a7-Uk-aa5"/>
+                            <constraint firstItem="5gM-ns-ryn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CaI-tc-Glz"/>
+                            <constraint firstItem="zg0-Hc-eSG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JHQ-sC-YRj"/>
+                            <constraint firstItem="5gM-ns-ryn" firstAttribute="top" secondItem="rzu-uP-Lyk" secondAttribute="bottom" constant="50" id="LDU-NO-UOo"/>
+                            <constraint firstItem="zg0-Hc-eSG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Nue-jM-bA3"/>
+                            <constraint firstItem="zg0-Hc-eSG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="STJ-C0-QAH"/>
+                            <constraint firstItem="zg0-Hc-eSG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YLD-vV-8Kk"/>
+                            <constraint firstItem="5gM-ns-ryn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cZA-1a-lEj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5gM-ns-ryn" secondAttribute="trailing" constant="30" id="rKM-jM-uma"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="coverView" destination="zg0-Hc-eSG" id="BA6-bz-ber"/>
+                        <outlet property="logoImageView" destination="Tp5-eX-1vX" id="RzK-HZ-G3X"/>
+                        <outlet property="paper" destination="izz-qr-aYL" id="dst-00-bhu"/>
+                        <outlet property="resultDescriptionLabel" destination="rzu-uP-Lyk" id="HZ8-9r-gqy"/>
+                        <outlet property="resultImageView" destination="eWS-UQ-Ryc" id="QIa-My-ZKh"/>
+                        <outlet property="rock" destination="B2u-ZZ-15W" id="30f-Ii-ofO"/>
+                        <outlet property="scissors" destination="nBu-U4-jm0" id="P3h-qg-day"/>
+                        <outlet property="stageTextField" destination="IzO-FB-cvi" id="ZHr-LJ-gRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu" width="200" height="175.5"/>
+        <image name="paper" width="200" height="213.5"/>
+        <image name="paper_tap" width="200" height="213.5"/>
+        <image name="rock" width="200" height="208.5"/>
+        <image name="rock_tap" width="200" height="208.5"/>
+        <image name="scissors" width="200" height="270.5"/>
+        <image name="scissors_tap" width="200" height="270.5"/>
+        <image name="start_button" width="158" height="28.5"/>
+        <image name="start_button_tap" width="158" height="28.5"/>
+    </resources>
+</document>
